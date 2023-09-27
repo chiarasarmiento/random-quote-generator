@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    background-color: #DBC4F0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image:  url("images/background-svg.svg");
+  background-position: center;
+  background-size: cover;
+}
+.container > div{
+  width: 800px;
+}
+.quote-box {
+  height: 230px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 0px 14px 9px rgba(0,0,0,0.07);
+  -webkit-box-shadow: 10px 0px 14px 9px rgba(0,0,0,0.07);
+  -moz-box-shadow: 10px 0px 14px 9px rgba(0,0,0,0.07);
+  position: relative;
+}
+.quote-head {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+ 
+button {
+  background: #6d5972;
+  color: #fff;
+  border: 0px;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 10px;
+  align-self: center;
+  padding: 10px;
+  box-shadow: 10px 0px 14px 9px rgba(0,0,0,0.07);
+  -webkit-box-shadow: 10px 0px 14px 9px rgba(0,0,0,0.07);
+  -moz-box-shadow: 10px 0px 14px 9px rgba(0,0,0,0.07);
+}
+p::before {
+  content: url(images/quotation_quote_icon.png);
+  position: absolute;
+  left: 0px;
+  top: -17px;
+}
+p{
+  margin: 20px 0px;
+  padding-left: 50px;
+  position: relative;
+}
+#generated-quote {
+  text-align: center;
+  margin: 0 auto;
+}
+#generated-quote span{
+  font-weight: bold;
+}
+.ftr {
+  text-align: right;
+  margin: 10px;
+  color: #c1d0b5;
+  font-size: 0.8em;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #9a849f;
+    border-bottom-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 0 auto;
+  }
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+@media (max-width: 895px){
+    .container > div{
+        width: 100%;
+        padding: 30px;
+    }
+    .quote-box {
+        height: unset;
+    }
+}
+@media (max-width: 460px){
+    p{
+        margin: 0px;
+        margin-bottom: 20px;
+        padding: 0px;
+    }
+    p::before{
+        display: block;
+        position: unset;
+    }
+    .quote-head {
+        flex-direction: column;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .ftr {
+      text-align: center;
+      margin: 20px;
+    }
+}
